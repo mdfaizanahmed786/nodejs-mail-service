@@ -8,10 +8,6 @@ function App() {
     const response=await axios.post(`${import.meta.env.VITE_BACKEND}/send`, {
       email: 'you@gmail.com',
       name: 'Faizan Ahmed',
-    }, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
     })
     console.log(response.data)
   }

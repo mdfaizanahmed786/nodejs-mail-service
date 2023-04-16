@@ -17,13 +17,13 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.post("/send", (req, res) => {
+app.post("/send",async (req, res) => {
   const { email, name } = req.body;
   if(!email || !name) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  (async () => {
+ 
     // launch a new chrome instance
 
     try {
@@ -280,7 +280,7 @@ app.post("/send", (req, res) => {
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
-  })();
+
 
   res.status(200).json({ message: "Email sent!" });
 });
