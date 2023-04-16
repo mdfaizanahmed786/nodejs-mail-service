@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   const sendPDF=async()=>{
-    const response=await axios.post('http://localhost:3000/send', {
+    const response=await axios.post(`${import.meta.env.VITE_BACKEND}/send`, {
       email: 'you@gmail.com',
       name: 'Faizan Ahmed',
     }, {
