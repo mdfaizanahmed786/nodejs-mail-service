@@ -6,7 +6,7 @@ function App() {
 
   const sendPDF=async()=>{
     const response=await axios.post(`${import.meta.env.VITE_BACKEND}/send`, {
-      email: 'you@gmail.com',
+      email: 'ahmedriyan528@gmail.com',
       name: 'Faizan Ahmed',
     })
     console.log(response.data)
